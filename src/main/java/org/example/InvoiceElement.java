@@ -44,11 +44,14 @@ public class InvoiceElement {
     return text;
   }
 
+  //GRASP - Information expert
+  // obvious that this class knows the most about info inside getters and setters
   public int getAmount() {
     return amount;
   }
 
-
+  //GRASP - Information expert
+  // obvious that this class knows the most about info inside getters and setters
   public Commodity getCommodity() {
     return commodity;
   }
