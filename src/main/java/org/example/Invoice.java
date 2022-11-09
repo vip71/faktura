@@ -6,11 +6,11 @@ import java.util.ArrayList;
  * GRASP - Responsible for managing invoice.
  */
 public class Invoice {
-/* default */ int id;
-/* default */ String clientName;
-/* default */ String employeeName;
-/* default */ ArrayList<InvoiceElement> elementList;
-/* default */ SaveMe saveMe;
+  int id;
+  String clientName;
+  String employeeName;
+  ArrayList<InvoiceElement> elementList;
+  SaveMe saveMe;
 
 //GRASP - Information expert
 // obvious that this class knows the most about its own
@@ -95,5 +95,13 @@ public class Invoice {
     this.employeeName = employeeName;
     this.clientName = clientName;
     saveMe.save(this);
+  }
+
+  public String getEmployeeName() {
+    return employeeName;
+  }
+
+  public String getClientName() {
+    return clientName;
   }
 }

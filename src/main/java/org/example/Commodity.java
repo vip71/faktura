@@ -13,6 +13,8 @@ public class Commodity {
   */
   private final float unitPrice;
 
+  private final SaveMe saveMe;
+
   /**
   * //GRASP - Information expert.
   * // obvious that this class knows the most about its own
@@ -23,7 +25,7 @@ public class Commodity {
   Commodity(final String name, final float unitPrice, SaveMe saveMe) {
     this.name = name;
     this.unitPrice = unitPrice;
-    saveMe.save(this);
+    this.saveMe = saveMe;
   }
 
   /**
@@ -42,5 +44,9 @@ public class Commodity {
   */
   public String getName() {
     return name;
+  }
+
+  public void save() {
+    saveMe.save(this);
   }
 }

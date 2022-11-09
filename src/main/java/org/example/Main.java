@@ -5,7 +5,7 @@ package org.example;
  */
 public class Main {
   /**
-  * Constructor
+  * Constructor.
 
   * @param args args
   */

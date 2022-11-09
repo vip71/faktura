@@ -8,11 +8,17 @@ public class InvoiceElement {
   private final Commodity commodity;
   private final int amount;
 
+  private final SaveMe saveMe;
+
   //GRASP - Information expert
   // obvious that this class knows the most about its own
   InvoiceElement(int amount, float unitPrice, String name, SaveMe saveMe) {
     this.commodity = new Commodity(name, unitPrice, saveMe);
     this.amount    = amount;
+    this.saveMe = saveMe;
+  }
+
+  public void saveElement() {
     saveMe.save(this);
   }
 
@@ -36,5 +42,14 @@ public class InvoiceElement {
         + commodity.getUnitPrice() + " " + calcElementPrice();
 
     return text;
+  }
+
+  public int getAmount() {
+    return amount;
+  }
+
+
+  public Commodity getCommodity() {
+    return commodity;
   }
 }
