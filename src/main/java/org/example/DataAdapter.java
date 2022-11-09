@@ -20,7 +20,7 @@ public class DataAdapter implements SaveMe {
                                                       "root", "password");
       Statement statement = connection.createStatement();
       String query = "INSERT INTO commodity VALUES('" + currentCommodityId + "','"
-                    + commodity.getName() + "','" + commodity.getUnitPrice() + "')";
+                    + commodity.getName() + "','" + commodity.getUnitPrice() + "','" + currentInvoiceId + "')";
       currentCommodityId++;
       statement.executeQuery(query);
     } catch (SQLException e) {
