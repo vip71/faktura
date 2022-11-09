@@ -105,6 +105,7 @@ public class Invoice {
     this.employeeName = employeeName;
     this.clientName = clientName;
     saveMe.save(this);
+    clearElements();
   }
 
   //GRASP - Information expert
